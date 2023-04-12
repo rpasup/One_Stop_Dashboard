@@ -1,11 +1,13 @@
 //import React, { useState, useEffect } from 'react';
-import React from 'react';
+// import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Boxespage from './component/Boxespage';
 import Deployment_details from './component/Deployment_details';
 import NavigationBar from './component/NavigationBar';
 import ApplicationInfo from './component/ApplicationInfo';
 import Logs_details from './component/Log_details';
+import './component/NavigationBar.css';
 
 function App() {
   return (

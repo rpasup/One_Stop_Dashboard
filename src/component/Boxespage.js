@@ -11,7 +11,7 @@ function Boxespage(props) {
         <Box title="FrontEndApp's" content="4" color="#2196f3" />
       </div>
       <div className="box-col">
-        <Box title="FrontEndApp's" content="6" color="#9c27b0" />
+        <Box title="BackEndApp's" content="6" color="#9c27b0" />
         <Box title="Total Up and Running" content="6/10" color="#ff9800" />
       </div>
     </div>
