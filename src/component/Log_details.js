@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import './Deployment_details.css'
+import './Log_details.css'
 
-function Deployment_details() {
+function Logs_details() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('../digital_team_dashboard/data.txt')
+    fetch('../digital_team_dashboard/Application_information.txt')
       .then(response => response.text())
       .then(text => {
         const rows = text.split('\n');
@@ -24,27 +24,27 @@ function Deployment_details() {
 
   return (
         <div>
-      <h1 align ='center'> Development </h1> 
+      <h1 align ='center'> Logs Information </h1> 
       <table>
         <thead>
           <tr>
-            <th>Application</th>
-            <th>DeploymentStatus</th>
-            <th>Application_Status</th>
-            <th>Build_Number</th>
-            <th>Last_Deployed_On</th>
-            <th>Deployed_By</th>
+            <th>ApplicationName</th>
+            <th>Environment</th>
+            <th>Deployedon</th>
+            <th>Logs</th>
           </tr>
         </thead>
         <tbody>
           {data.map((row, index) => (
             <tr key={index}>
-              <td>{row.Application}</td>
-              <td>{row.DeploymentStatus}</td>
-              <td>{row.Application_Status}</td>
-              <td>{row.Build_Number}</td>
-              <td>{row.Last_Deployed_On}</td>
-              <td>{row.Deployed_By}</td>
+              <td>{row.ApplicationName}</td>
+              <td>{row.Environment}</td>
+              <td>{row.Deployedon}</td>
+              <td>
+                <a href={row.Logs}>
+                <button>Click Here</button>
+              </a>
+            </td>
             </tr>
           ))}
         </tbody>
@@ -53,4 +53,4 @@ function Deployment_details() {
   );
 }
 
-export default Deployment_details;
+export default Logs_details;

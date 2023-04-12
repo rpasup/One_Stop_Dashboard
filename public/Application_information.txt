@@ -1,0 +1,3 @@
+ApplicationName,Environment,Deployedon,Logs,
+Webapply,Develop,Nginx,https://google.com
+Webapply server,UAT,JBOSS

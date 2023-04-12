@@ -1,8 +1,15 @@
-Name,Age,City,
-John,25,M
-Jane,32,F
-Alex,20,M
-Emily,27,F
-William,29,M
-Samantha,33,F
-Peter,28,M
+Application,DeploymentStatus,Application_Status,Build_Number,Last_Deployed_On,DeployedBy,
+Webapply,Deployed,Up&Running,1234
+Webapply_Server,Success,Deployed,1234
+Document_Uploader,Success,Deployed,12
+Digital2.0_Web,Success,Deployed,12
+BBG_Loans,Success,Deployed,12
+SMESOUk,Success,Deployed,12
+SMESOUK_AdminWeb,Success,Deployed,12
+Experience_layer,Success,Deployed,12
+rakbank-kyc,Success,Deployed,12
+Statement_reader,Success,Deployed,12
+Ipo_integrator,Success,Deployed,5678912
+BBG2.0_Webapply,Deployed,Up And Running,99510_20230411.01
+BBG2.0_Exp_layer,Deployed,Up And Running,98512_20230327.01
+BBG2.0_rakbank-kyc,Deployed,Up And Running,98753_20230330.01

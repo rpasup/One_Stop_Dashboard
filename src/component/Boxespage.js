@@ -1,29 +1,18 @@
 import React from 'react';
+import Box from './Box';
 import './Boxespage.css';
 
-function Boxespage() {
+function Boxespage(props) {
   return (
-    <div className="container">
-      <div className="box red">
-        <h1>Environments</h1>
-        <h2>3</h2>
+    <div className="box-container">
+      <div className="box-row">
+        <Box title="Environments" content="3" color="#f44336" />
+        <Box title="Servers" content="10" color="#4caf50" />
+        <Box title="FrontEndApp's" content="4" color="#2196f3" />
       </div>
-      <div className="box orange">
-        <h1>Servers</h1>
-        <h2>5</h2>
-      </div>
-      <div className="box yellow">
-        Applications<br></br>
-        10
-      </div>
-      <div className="box green">
-        front End Applications
-      </div>
-      <div className="box blue">
-        Backend Applications
-      </div>
-      <div className="box purple">Team Details-- not needed but just kept
-      here we can have all the genaric urls and onbaording kit details
+      <div className="box-col">
+        <Box title="FrontEndApp's" content="6" color="#9c27b0" />
+        <Box title="Total Up and Running" content="6/10" color="#ff9800" />
       </div>
     </div>
   );
