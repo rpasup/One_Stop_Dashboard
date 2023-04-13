@@ -9,6 +9,9 @@
   color: #fff;
   text-align: center;
   transition: transform 0.3s ease-in-out;
+  border-radius: 10px; /* sets the border radius to 10 pixels */
+  border: 1px solid #ccc; /* adds a 1 pixel solid border */
+  padding: 10px; /* adds some padding inside the box */
 }
 
 .button {

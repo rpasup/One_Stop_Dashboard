@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import './Deployment_details.css'
+import { FaCheckCircle } from "react-icons/fa";
+import { FaTimesCircle } from "react-icons/fa";
+import './Deploymentdetails.css'
 
-function Deployment_details() {
+function Deploymentdetails() {
   const [data, setData] = useState([]);
+  const getStatusIcon = (status) => {
+    if (status === "up_running") {
+      return <FaCheckCircle color="green"/>;
+    } else {
+      return <FaTimesCircle color="red"/>;
+    }
+  };
 
   useEffect(() => {
     fetch('../digital_team_dashboard/data.txt')
@@ -32,8 +41,9 @@ function Deployment_details() {
             <th>DeploymentStatus</th>
             <th>Application_Status</th>
             <th>Build_Number</th>
-            <th>Last_Deployed_On</th>
+            <th>Logs</th>
             <th>Deployed_By</th>
+            <th>Last_Deployed_On</th>
           </tr>
         </thead>
         <tbody>
@@ -41,10 +51,11 @@ function Deployment_details() {
             <tr key={index}>
               <td>{row.Application}</td>
               <td>{row.DeploymentStatus}</td>
-              <td>{row.Application_Status}</td>
+              <td> {getStatusIcon(row.Application_Status)}</td>
               <td>{row.Build_Number}</td>
+              <td><a href={row.logs}><button>Click_Here</button></a></td>
+              <td>{row.DeployedBy}</td>
               <td>{row.Last_Deployed_On}</td>
-              <td>{row.Deployed_By}</td>
             </tr>
           ))}
         </tbody>
@@ -53,4 +64,4 @@ function Deployment_details() {
   );
 }
 
-export default Deployment_details;
+export default Deploymentdetails;

@@ -1,0 +1,82 @@
+.navbar {
+    background-color: #333;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-item {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #ddd;
+  }
+  
+  .navbar-nav {
+    margin-left: auto;
+  }
+  
+  .navbar-nav > li {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .navbar-brand {
+    margin-right: 50px;
+  }
+  
+  .dropdown-menu-right {
+    right: 0 !important;
+    left: auto !important;
+  }
+  
+  .nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .navbar-toggler {
+    border-color: #ffffff !important;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+  

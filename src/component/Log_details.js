@@ -24,27 +24,27 @@ function Logs_details() {
 
   return (
         <div>
-      <h1 align ='center'> Logs Information </h1> 
+      <h1 align ='center'> Application Information </h1> 
       <table>
         <thead>
           <tr>
             <th>ApplicationName</th>
-            <th>Environment</th>
-            <th>Deployedon</th>
-            <th>Logs</th>
+            <th>WebServer</th>
+            <th>AppServer</th>
+            <th>DEH_OAuth</th>
+            <th>DEH_App1</th>
+            <th>DEH_2</th>
           </tr>
         </thead>
         <tbody>
           {data.map((row, index) => (
             <tr key={index}>
               <td>{row.ApplicationName}</td>
-              <td>{row.Environment}</td>
-              <td>{row.Deployedon}</td>
-              <td>
-                <a href={row.Logs}>
-                <button>Click Here</button>
-              </a>
-            </td>
+              <td>{row.WebServer}</td>
+              <td>{row.AppServer}</td>
+              <td>{row.DEH_OAuth}</td>
+              <td>{row.DEH_App1}</td>
+              <td>{row.DEH_App1}</td>
             </tr>
           ))}
         </tbody>

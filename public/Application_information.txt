@@ -1,3 +1,4 @@
-ApplicationName,Environment,Deployedon,Logs,
-Webapply,Develop,Nginx,https://google.com
-Webapply server,UAT,JBOSS
+ProjectName,WebServer,AppServer,DEH_OAuth,DEH_App1,DEH_App2,
+BBG1.0,success,failure,success,failure,success
+BBG2.0,success,failure,success,success,success,failure
+Retail,success,success,success,failure,success,failure

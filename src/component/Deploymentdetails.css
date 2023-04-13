@@ -1,0 +1,40 @@
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 800px;
+    border: 0px solid #ddd;
+    font-size: 1em;
+    margin: 20px;
+    text-align: center;
+    margin: auto;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #dfdbdb;
+    font-weight: bold;
+  }
+  
+  tr:hover {
+    background-color: #f5e2a6;
+  }
+  
+  /* table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  } */
+
