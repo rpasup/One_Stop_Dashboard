@@ -7,12 +7,13 @@ function Boxespage(props) {
     <div className="box-container">
       <div className="box-row">
         <Box title="Environments" content="3" color="#f44336" />
-        <Box title="Servers" content="10" color="#4caf50" />
-        <Box title="FrontEndApp's" content="4" color="#2196f3" />
+        <Box title="Applications" content="10" color="#4caf50" />
+        <Box title="Deployed" content="4" color="#2196f3" />
       </div>
       <div className="box-col">
-        <Box title="BackEndApp's" content="6" color="#9c27b0" />
-        <Box title="Total Up and Running" content="6/10" color="#ff9800" />
+        <Box title="Running Apps" content="6" color="#9c27b0" />
+        <Box title="Failed Apps" content="8" color="#ff9800" />
+        <Box title="Projects" content="8" color="#9c27b4" />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaCheckCircle } from "react-icons/fa";
 import { FaTimesCircle } from "react-icons/fa";
+import { BsFillFileEarmarkTextFill } from 'react-icons/bs';
 import './Deploymentdetails.css'
 
 function Deploymentdetails() {
@@ -53,7 +54,12 @@ function Deploymentdetails() {
               <td>{row.DeploymentStatus}</td>
               <td> {getStatusIcon(row.Application_Status)}</td>
               <td>{row.Build_Number}</td>
-              <td><a href={row.logs}><button>Click_Here</button></a></td>
+              <td>
+                <a href={row.logs}>
+                  <BsFillFileEarmarkTextFill />
+                </a>
+              </td>
+              {/* <td><a href={row.logs}><button>Click_Here</button></a></td> */}
               <td>{row.DeployedBy}</td>
               <td>{row.Last_Deployed_On}</td>
             </tr>
