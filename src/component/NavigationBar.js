@@ -48,6 +48,11 @@ function NavigationBar() {
               <Dropdown.Item><Link to="/digital_team_dashboard/Application_Info">Production</Link></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
+          {/* <div className="navbar-end">
+            <div className="navbar-item has-text-white">
+              Last Reload Time: {lastReloadTime}
+            </div>
+          </div> */}
           {/* <Nav.Link><Link to="/digital_team_dashboard/Application_Info">Application_Info</Link></Nav.Link> */}
           {/* <Nav.Link><Link to="/digital_team_dashboard/StatusTable">StatusTable</Link></Nav.Link> */}
           {/* <Nav.Link href="#">Last Autoupdated at : 12th April 2023,18:00:00 GST</Nav.Link> */}
