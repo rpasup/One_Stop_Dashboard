@@ -6,6 +6,8 @@ import './Deploymentdetails.css'
 
 function Deploymentdetails() {
   const [data, setData] = useState([]);
+  const [filterText, setFilterText] = useState("");
+
   const getStatusIcon = (status) => {
     if (status === "up_running") {
       return <FaCheckCircle color="green"/>;
@@ -15,7 +17,7 @@ function Deploymentdetails() {
   };
 
   useEffect(() => {
-    fetch('../digital_team_dashboard/data.txt')
+    fetch('../digital_team_dashboard/deployment_details.txt')
       .then(response => response.text())
       .then(text => {
         const rows = text.split('\n');
@@ -32,12 +34,25 @@ function Deploymentdetails() {
       .catch(error => console.error(error));
   }, []);
 
+  const filteredData = data.filter((row) =>
+    row["Application"].toLowerCase().includes(filterText.toLowerCase())
+  );
+
   return (
-        <div>
-      <h1 align ='center'> Development </h1> 
+    <div className="deployment-details">
+      <div className="filter">
+        <span>Filter by Application:</span>
+        <input
+          type="text"
+          placeholder="Search..."
+          value={filterText}
+          onChange={(e) => setFilterText(e.target.value)}
+        />
+      </div>
       <table>
         <thead>
           <tr>
+            <th>Environment</th>
             <th>Application</th>
             <th>DeploymentStatus</th>
             <th>Application_Status</th>
@@ -48,18 +63,18 @@ function Deploymentdetails() {
           </tr>
         </thead>
         <tbody>
-          {data.map((row, index) => (
+          {filteredData.map((row, index) => (
             <tr key={index}>
+              <td>{row.Environment}</td>
               <td>{row.Application}</td>
               <td>{row.DeploymentStatus}</td>
               <td> {getStatusIcon(row.Application_Status)}</td>
               <td>{row.Build_Number}</td>
               <td>
-                <a href={row.logs}>
+                <a href={row.logs} target="_blank" rel="noopener noreferrer">
                   <BsFillFileEarmarkTextFill />
                 </a>
               </td>
-              {/* <td><a href={row.logs}><button>Click_Here</button></a></td> */}
               <td>{row.DeployedBy}</td>
               <td>{row.Last_Deployed_On}</td>
             </tr>

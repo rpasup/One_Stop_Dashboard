@@ -1,0 +1,17 @@
+Environment,Application,DeploymentStatus,Application_Status,Build_Number,logs,DeployedBy,Last_Deployed_On,
+Development,Webapply,Deployed,up_running,1234,https://google.com,rajasekhar,13/04/23-13:25:00
+Development,Webapply_Server,Not_deployed,not_up_running,1234
+Development,Document_Uploader,Deployed,up_running,12
+Development,Digital2.0_Web,Deployed,up_running,12
+Development,BBG_Loans,Deployed,up_running,12
+Development,SMESOUk,Not_deployed,not_up_running,12
+Development,SMESOUK_AdminWeb,Deployed,not_up_running,12
+Development,Experience_layer,Deployed,up_running,12
+Development,rakbank-kyc,Not_Deployed,not_up_running,12
+Development,Statement_reader,Deployed,up_running,12
+Development,Ipo_integrator,Not_deployed,up_running,5678912
+Development,BBG2.0_Webapply,Deployed,up_running,99510_20230411.01,https://google.com,rajasekhar,14/04/23-13:25:00
+Development,BBG2.0_Exp_layer,Deployed,up_running,98512_20230327.01
+Development,BBG2.0_rakbank-kyc,Deployed,up_running,98753_20230330.01
+UAT,BBG2.0_Webapply,Deployed,up_running,99510_20230411.01,https://google.com,rajasekhar,14/04/23-13:25:0
+PROD,SMESOUk,Not_deployed,not_up_running,12

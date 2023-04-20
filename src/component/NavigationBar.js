@@ -6,6 +6,13 @@ import logo from '../RAKBANK_LOGO.png'
 import './NavigationBar.css';
 
 function NavigationBar() {
+    const getLastRefreshedTime = () => {
+    const date = new Date();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    return `${hours}:${minutes}:${seconds}`;
+    };
   return (
       <Navbar sticky="top" bg="dark" expand="xl">
       <Navbar.Brand href="/digital_team_dashboard">
@@ -17,7 +24,7 @@ function NavigationBar() {
           alt="Logo"
         />
       </Navbar.Brand>
-      <Navbar.Text className="text-white font-weight-bold">
+      <Navbar.Text className="text-white font-weight-bold" style={{fontSize: "1.5rem"}}>
         Digital Team Dashboard
       </Navbar.Text>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -25,9 +32,9 @@ function NavigationBar() {
         <Nav className="me-auto">
           {/* <Nav.Link><Link to="/digital_team_dashboard">Home</Link></Nav.Link> */}
           {/* <Nav.Link><Link to="/digital_team_dashboard/Deployment_Info">Deployment_Info</Link></Nav.Link> */}
-          <Dropdown>
-            <Dropdown.Toggle variant="light" id="collasible-nav-dropdown">
-              Deploymentdetails
+          <Dropdown style={{marginRight: "20px"}}>
+            <Dropdown.Toggle variant="dark" id="collasible-nav-dropdown">
+              Deployment Overview
             </Dropdown.Toggle>
             <Dropdown.Menu>
               <Dropdown.Item><Link to="/digital_team_dashboard/Deployment_Info">Development</Link></Dropdown.Item>
@@ -38,24 +45,16 @@ function NavigationBar() {
           </Dropdown>
           
           <Dropdown>
-            <Dropdown.Toggle variant="light" id="collasible-nav-dropdown">
-              Application Overview
+            <Dropdown.Toggle variant="dark" id="collasible-nav-dropdown">
+              Applications Overview
             </Dropdown.Toggle>
-
             <Dropdown.Menu>
               <Dropdown.Item><Link to="/digital_team_dashboard/Application_Info">Development</Link></Dropdown.Item>
               <Dropdown.Item><Link to="/digital_team_dashboard/Application_Info">UAT</Link></Dropdown.Item>
               <Dropdown.Item><Link to="/digital_team_dashboard/Application_Info">Production</Link></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          {/* <div className="navbar-end">
-            <div className="navbar-item has-text-white">
-              Last Reload Time: {lastReloadTime}
-            </div>
-          </div> */}
-          {/* <Nav.Link><Link to="/digital_team_dashboard/Application_Info">Application_Info</Link></Nav.Link> */}
-          {/* <Nav.Link><Link to="/digital_team_dashboard/StatusTable">StatusTable</Link></Nav.Link> */}
-          {/* <Nav.Link href="#">Last Autoupdated at : 12th April 2023,18:00:00 GST</Nav.Link> */}
+          <span className="last-refreshed-time">Last Refreshed Time: {getLastRefreshedTime()}</span>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
