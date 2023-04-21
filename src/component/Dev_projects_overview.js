@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { FaCheckCircle } from "react-icons/fa";
 import { FaTimesCircle } from "react-icons/fa";
-import './Log_details.css'
+import './Dev_projects_overview.css'
 
-function Logs_details() {
+function Dev_projects_overview() {
   const [data, setData] = useState([]);
 
   const getStatusIcon = (status) => {
@@ -15,7 +15,7 @@ function Logs_details() {
 
 
   useEffect(() => {
-    fetch('../digital_team_dashboard/Application_information.txt')
+    fetch('../digital_team_dashboard/DEV_projects_Overview.txt')
       .then(response => response.text())
       .then(text => {
         const rows = text.split('\n');
@@ -38,12 +38,18 @@ function Logs_details() {
       <table>
         <thead>
           <tr>
+          <th></th>
+          <th colSpan="2">FrontEnd</th>
+          <th colSpan="4">BackEnd(DEH)</th>
+          </tr>
+          <tr>
             <th>ProjectName</th>
             <th>WebServer</th>
             <th>AppServer</th>
             <th>DEH_OAuth</th>
-            <th>DEH_App1</th>
-            <th>DEH_App2</th>
+            <th>DEH_AuthMS</th>
+            <th>DEH_SMECO</th>
+            <th>DEH_DB_Profile</th>
           </tr>
         </thead>
         <tbody>
@@ -53,8 +59,9 @@ function Logs_details() {
               <td>{getStatusIcon(row.WebServer)}</td>
               <td>{getStatusIcon(row.AppServer)}</td>
               <td>{getStatusIcon(row.DEH_OAuth)}</td>
-              <td>{getStatusIcon(row.DEH_App1)}</td>
-              <td>{getStatusIcon(row.DEH_App2)}</td>
+              <td>{getStatusIcon(row.DEH_AuthMS)}</td>
+              <td>{getStatusIcon(row.DEH_SMECO)}</td>
+              <td>{getStatusIcon(row.DEH_DB_Profile)}</td>
             </tr>
           ))}
         </tbody>
@@ -63,4 +70,4 @@ function Logs_details() {
   );
 }
 
-export default Logs_details;
+export default Dev_projects_overview;

@@ -16,6 +16,16 @@ function Boxespage(props) {
     fetchData();
   }, []);
 
+  // useEffect(() => {
+  //   async function fetchData() {
+  // const projects = await fetch('../digital_team_dashboard/DEV_projects_Overview.txt');
+  // const project_names = await projects.text();
+  // const projects_count = project_names.split('\n').map(row => row.split(','));
+  // setData(projects_count);
+  // }
+  // fetchData();
+  // }, []);
+
   return (
     <div className="box-container">
       <div className="box-row">
@@ -36,9 +46,8 @@ function Boxespage(props) {
       <Link to="/digital_team_dashboard/Deployment_Info" style={{ textDecoration: 'none' }}>
         <Box title="Failed Apps" content={data.filter(row => row[3] === 'not_up_running').length} color="#ff9800" />
       </Link>
-        {/* <Box title="Projects" content={new Set(data.map(row => row[0])).size} color="#9c27b4" /> */}
-      <Link to="/digital_team_dashboard/Application_Info" style={{ textDecoration: 'none' }}>
-        <Box title="Projects" content='--' color="#4c29b4" /> 
+      <Link to="/digital_team_dashboard/Dev_projects_overview" style={{ textDecoration: 'none' }}>
+        <Box title="Projects" content={new Set(data.map(projects_count => projects_count[0])).size - 1} color="#4c29b4" /> 
       </Link>
       </div>
     </div>

@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Boxespage from './component/Boxespage';
 import Deploymentdetails from './component/Deploymentdetails';
 import NavigationBar from './component/NavigationBar';
-import ApplicationInfo from './component/ApplicationInfo';
+import Devprojectsoverview from './component/Dev_projects_overview';
+import UATprojectsoverview from './component/UAT_projects_overview';
 import './component/NavigationBar.css';
 
 function App() {
@@ -36,7 +37,8 @@ function App() {
       <Routes>
         <Route path="/digital_team_dashboard" element={<Boxespage />} />
         <Route path="/digital_team_dashboard/Deployment_Info" element={<Deploymentdetails />} />
-        <Route path="/digital_team_dashboard/Application_Info" element={<ApplicationInfo />} />
+        <Route path="/digital_team_dashboard/Dev_projects_overview" element={<Devprojectsoverview />} />
+        <Route path="/digital_team_dashboard/UAT_projects_overview" element={<UATprojectsoverview />} />
       </Routes>
     </Router>
   );

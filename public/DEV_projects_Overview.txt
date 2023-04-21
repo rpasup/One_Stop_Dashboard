@@ -1,0 +1,4 @@
+ProjectName,WebServer,AppServer,DEH_OAuth,DEH_AuthMS,DEH_SMECO,DEH_DB_Profile,
+BBG1.0,success,success,failure,success,success,success
+BBG2.0,success,success,failure,failure,success,failure
+Retail,success,success,success,failure,success,success

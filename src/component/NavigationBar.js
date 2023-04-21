@@ -31,8 +31,8 @@ function NavigationBar() {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
           {/* <Nav.Link><Link to="/digital_team_dashboard">Home</Link></Nav.Link> */}
-          {/* <Nav.Link><Link to="/digital_team_dashboard/Deployment_Info">Deployment_Info</Link></Nav.Link> */}
-          <Dropdown style={{marginRight: "20px"}}>
+          <Nav.Link><Link to="/digital_team_dashboard/Deployment_Info" style={{ textDecoration: 'none' }}>Deployment Overview</Link></Nav.Link>
+          {/* <Dropdown style={{marginRight: "20px"}}>
             <Dropdown.Toggle variant="dark" id="collasible-nav-dropdown">
               Deployment Overview
             </Dropdown.Toggle>
@@ -43,14 +43,14 @@ function NavigationBar() {
               <Dropdown.Item><Link to="/digital_team_dashboard/Deployment_Info">Production</Link></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-          
+           */}
           <Dropdown>
             <Dropdown.Toggle variant="dark" id="collasible-nav-dropdown">
               Projects Overview
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item><Link to="/digital_team_dashboard/Application_Info">Development</Link></Dropdown.Item>
-              <Dropdown.Item><Link to="/digital_team_dashboard/Application_Info">UAT</Link></Dropdown.Item>
+              <Dropdown.Item><Link to="/digital_team_dashboard/Dev_projects_overview">Development</Link></Dropdown.Item>
+              <Dropdown.Item><Link to="/digital_team_dashboard/UAT_projects_overview">UAT</Link></Dropdown.Item>
               <Dropdown.Item><Link to="/digital_team_dashboard/Application_Info">Production</Link></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
