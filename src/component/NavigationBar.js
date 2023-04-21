@@ -46,7 +46,7 @@ function NavigationBar() {
           
           <Dropdown>
             <Dropdown.Toggle variant="dark" id="collasible-nav-dropdown">
-              Applications Overview
+              Projects Overview
             </Dropdown.Toggle>
             <Dropdown.Menu>
               <Dropdown.Item><Link to="/digital_team_dashboard/Application_Info">Development</Link></Dropdown.Item>

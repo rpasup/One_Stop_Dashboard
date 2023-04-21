@@ -42,6 +42,7 @@
 .dropdown-menu a {
   color: #fff !important;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .dropdown-menu a:hover {

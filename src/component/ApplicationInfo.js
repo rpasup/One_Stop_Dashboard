@@ -34,7 +34,7 @@ function Logs_details() {
 
   return (
         <div>
-      <h1 align ='center'> Application Information </h1> 
+      {/* <h1 align ='center'> Application Information </h1>  */}
       <table>
         <thead>
           <tr>

@@ -6,7 +6,7 @@ Development,Digital2.0_Web,Deployed,up_running,12
 Development,BBG_Loans,Deployed,up_running,12
 Development,SMESOUk,Not_deployed,not_up_running,12
 Development,SMESOUK_AdminWeb,Deployed,not_up_running,12
-Development,Experience_layer,Deployed,up_running,12
+Development,Experience_layer,Not_Deployed,up_running,12
 Development,rakbank-kyc,Not_Deployed,not_up_running,12
 Development,Statement_reader,Deployed,up_running,12
 Development,Ipo_integrator,Not_deployed,up_running,5678912
