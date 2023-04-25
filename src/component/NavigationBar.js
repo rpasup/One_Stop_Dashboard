@@ -25,7 +25,9 @@ function NavigationBar() {
         />
       </Navbar.Brand>
       <Navbar.Text className="text-white font-weight-bold" style={{fontSize: "1.5rem"}}>
+      <a href="/digital_team_dashboard" className="text-white font-weight-bold" style={{textDecoration: "none"}}>
         Digital Team Dashboard
+      </a>
       </Navbar.Text>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
