@@ -7,6 +7,7 @@ import './Deploymentdetails.css'
 function Deploymentdetails() {
   const [data, setData] = useState([]);
   const [filterText, setFilterText] = useState("");
+  const [maintenanceMessage, setMaintenanceMessage] = useState(null);
 
   const getStatusIcon = (status) => {
     if (status === "up_running") {
@@ -20,7 +21,8 @@ function Deploymentdetails() {
     fetch('../digital_team_dashboard/deployment_details.txt')
       .then(response => response.text())
       .then(text => {
-        const rows = text.split('\n');
+        const rows = text.trim().split('\n');
+        // const rows = text.split('\n');
         const headers = rows[0].split(',');
         const data = rows.slice(1).map(row => {
           const values = row.split(',');
@@ -32,16 +34,27 @@ function Deploymentdetails() {
         setData(data);
       })
       .catch(error => console.error(error));
+
+      fetch('../digital_team_dashboard/maintenance_updates.txt')
+      .then(response => response.text())
+      .then(text => {
+        setMaintenanceMessage(text.trim());
+      })
+      .catch(error => console.error(error));
   }, []);
 
   const filteredData = data.filter((row) =>
-    row["Application"].toLowerCase().includes(filterText.toLowerCase())
-  );
+    row["Application"] && row["Application"].toLowerCase().includes(filterText.toLowerCase())
+);
+
 
   return (
     <div className="deployment-details">
       <div className="filter">
-        <span>Filter by Application:</span>
+      {maintenanceMessage && (
+        <div className="maintenance-message"><span>{maintenanceMessage}</span></div>
+      )}
+        <span>Filter By Application:</span>
         <input
           type="text"
           placeholder="Search..."

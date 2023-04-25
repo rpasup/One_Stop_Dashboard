@@ -16,7 +16,7 @@ function App() {
       setLastReloadTime(getCurrentTime());
     };
 
-    const intervalId = setInterval(reloadPage, 5 * 60 * 1000); // reload the page every 5 minutes
+    const intervalId = setInterval(reloadPage, 0.5 * 60 * 1000); // reload the page every 5 minutes
 
     return () => {
       clearInterval(intervalId);

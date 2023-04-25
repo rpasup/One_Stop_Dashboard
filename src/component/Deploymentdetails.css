@@ -45,7 +45,7 @@
   }
   
   .filter-spans > span {
-    margin-right: 8px;
+    margin-right: 2px;
   }
   
   .filter-spans > span:last-child {
@@ -59,4 +59,33 @@
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
+  }
+
+  .maintenance-message {
+    /* position: fixed; */
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    /* background-color: #ffcccb;; */
+    color: black;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    overflow: hidden; /* hide the overflowing text */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .maintenance-message > span {
+    display: inline-block; /* make the text inline-block */
+    animation: marquee 15s linear infinite; /* set the animation */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
