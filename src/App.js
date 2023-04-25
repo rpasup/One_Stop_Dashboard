@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Boxespage from './component/Boxespage';
 import Deploymentdetails from './component/Deploymentdetails';
@@ -8,28 +8,18 @@ import UATprojectsoverview from './component/UAT_projects_overview';
 import './component/NavigationBar.css';
 
 function App() {
-  const [setLastReloadTime] = useState("");
 
   useEffect(() => {
     const reloadPage = () => {
       window.location.reload();
-      setLastReloadTime(getCurrentTime());
     };
 
-    const intervalId = setInterval(reloadPage, 0.5 * 60 * 1000); // reload the page every 5 minutes
+    const intervalId = setInterval(reloadPage, 5 * 60 * 1000); // reload the page every 5 minutes
 
     return () => {
       clearInterval(intervalId);
     };
-  }, [setLastReloadTime]);
-
-  const getCurrentTime = () => {
-    const date = new Date();
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const seconds = date.getSeconds();
-    return `${hours}:${minutes}:${seconds}`;
-  };
+  }, []);
 
   return (
     <Router>
@@ -43,4 +33,5 @@ function App() {
     </Router>
   );
 }
+
 export default App;
