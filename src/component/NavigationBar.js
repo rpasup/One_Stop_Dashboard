@@ -53,7 +53,7 @@ function NavigationBar() {
             <Dropdown.Menu>
               <Dropdown.Item><Link to="/digital_team_dashboard/Dev_projects_overview">Development</Link></Dropdown.Item>
               <Dropdown.Item><Link to="/digital_team_dashboard/UAT_projects_overview">UAT</Link></Dropdown.Item>
-              <Dropdown.Item><Link to="/digital_team_dashboard/WorkInProgress">Production</Link></Dropdown.Item>
+              <Dropdown.Item><Link to="/digital_team_dashboard/Production_projects_overview">Production</Link></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <span className="last-refreshed-time">Last Refreshed Time: {getLastRefreshedTime()}</span>

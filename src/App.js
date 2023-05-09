@@ -30,7 +30,7 @@ function App() {
         <Route path="/digital_team_dashboard/Deployment_Info" element={<Deploymentdetails />} />
         <Route path="/digital_team_dashboard/Dev_projects_overview" element={<Devprojectsoverview />} />
         <Route path="/digital_team_dashboard/UAT_projects_overview" element={<UATprojectsoverview />} />
-        <Route path="/digital_team_dashboard/WorkInProgress" element={<WorkInProgress />} />
+        <Route path="/digital_team_dashboard/Production_projects_overview" element={<WorkInProgress />} />
       </Routes>
     </Router>
   );
