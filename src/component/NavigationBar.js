@@ -15,7 +15,7 @@ function NavigationBar() {
     };
   return (
       <Navbar sticky="top" bg="dark" expand="xl">
-      <Navbar.Brand href="/digital_team_dashboard">
+      {/* <Navbar.Brand href="/digital_team_dashboard"> */}
       <img
           src={logo} // use your logo image here
           height="35"
@@ -23,7 +23,7 @@ function NavigationBar() {
           className="d-inline-block align-top"
           alt="Logo"
         />
-      </Navbar.Brand>
+      {/* </Navbar.Brand> */}
       <Navbar.Text className="text-white font-weight-bold" style={{fontSize: "1.5rem"}}>
       <a href="/digital_team_dashboard" className="text-white font-weight-bold" style={{textDecoration: "none"}}>
         Digital Team Dashboard
@@ -53,7 +53,7 @@ function NavigationBar() {
             <Dropdown.Menu>
               <Dropdown.Item><Link to="/digital_team_dashboard/Dev_projects_overview">Development</Link></Dropdown.Item>
               <Dropdown.Item><Link to="/digital_team_dashboard/UAT_projects_overview">UAT</Link></Dropdown.Item>
-              <Dropdown.Item><Link to="/digital_team_dashboard/Application_Info">Production</Link></Dropdown.Item>
+              <Dropdown.Item><Link to="/digital_team_dashboard/WorkInProgress">Production</Link></Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <span className="last-refreshed-time">Last Refreshed Time: {getLastRefreshedTime()}</span>

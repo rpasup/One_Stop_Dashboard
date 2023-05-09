@@ -5,6 +5,7 @@ import Deploymentdetails from './component/Deploymentdetails';
 import NavigationBar from './component/NavigationBar';
 import Devprojectsoverview from './component/Dev_projects_overview';
 import UATprojectsoverview from './component/UAT_projects_overview';
+import WorkInProgress from './component/WorkInProgress';
 import './component/NavigationBar.css';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/digital_team_dashboard/Deployment_Info" element={<Deploymentdetails />} />
         <Route path="/digital_team_dashboard/Dev_projects_overview" element={<Devprojectsoverview />} />
         <Route path="/digital_team_dashboard/UAT_projects_overview" element={<UATprojectsoverview />} />
+        <Route path="/digital_team_dashboard/WorkInProgress" element={<WorkInProgress />} />
       </Routes>
     </Router>
   );
