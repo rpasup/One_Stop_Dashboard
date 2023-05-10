@@ -31,7 +31,7 @@ function NavigationBar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link><Link to="/digital_team_dashboard/Deployment_Info" style={{ textDecoration: 'none',marginLeft: "85px" }}>Deployment Overview</Link></Nav.Link>
+          <Nav.Link><Link to="/digital_team_dashboard/Deployment_Info" style={{ textDecoration: 'none'}}>Deployment Overview</Link></Nav.Link>
           <Dropdown>
             <Dropdown.Toggle variant="dark" id="collasible-nav-dropdown">
               Projects Overview
