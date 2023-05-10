@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar, Nav, Dropdown } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
-import logo from '../RAKBANK_LOGO.png'
+import logo from '../RAKBANK_LOGO.svg'
 import './NavigationBar.css';
 
 function NavigationBar() {
@@ -23,7 +23,7 @@ function NavigationBar() {
         className="d-inline-block align-top"
         alt="Logo"
       />
-      <Navbar.Text className="text-white font-weight-bold" style={{ fontSize: "1.5rem", marginLeft: "85px" }}>
+      <Navbar.Text className="text-white font-weight-bold" style={{ fontSize: "1.5rem", marginLeft: "25px" }}>
         <a href="/digital_team_dashboard" className="text-white font-weight-bold" style={{ textDecoration: "none" }}>
           Digital Team Dashboard
         </a>

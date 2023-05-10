@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaCheckCircle } from "react-icons/fa";
-import { FaTimesCircle } from "react-icons/fa";
+import { FaCheckCircle, FaTimesCircle, FaMinusCircle } from 'react-icons/fa';
 import './Dev_projects_overview.css'
 
 function Dev_projects_overview() {
@@ -9,6 +8,8 @@ function Dev_projects_overview() {
   const getStatusIcon = (status) => {
     if (status === "success") {
       return <FaCheckCircle color="green"/>;
+    } else if (status === "NA") {
+      return <FaMinusCircle color="gray" />;
     } else
       return <FaTimesCircle color="red"/>;
   };
@@ -56,12 +57,12 @@ function Dev_projects_overview() {
           {data.map((row, index) => (
             <tr key={index}>
               <td>{row.ProjectName}</td>
-              <td>{getStatusIcon(row.WebServer)}</td>
-              <td>{getStatusIcon(row.AppServer)}</td>
-              <td>{getStatusIcon(row.DEH_OAuth)}</td>
-              <td>{getStatusIcon(row.DEH_AuthMS)}</td>
-              <td>{getStatusIcon(row.DEH_SMECO)}</td>
-              <td>{getStatusIcon(row.DEH_DB_Profile)}</td>
+              <td title={row.WebServer}>{getStatusIcon(row.WebServer)}</td>
+              <td title={row.AppServer}>{getStatusIcon(row.AppServer)}</td>
+              <td title={row.DEH_OAuth}>{getStatusIcon(row.DEH_OAuth)}</td>
+              <td title={row.DEH_AuthMS}>{getStatusIcon(row.DEH_AuthMS)}</td>
+              <td title={row.DEH_SMECO}>{getStatusIcon(row.DEH_SMECO)}</td>
+              <td title={row.DEH_DB_Profile}>{getStatusIcon(row.DEH_DB_Profile)}</td>
             </tr>
           ))}
         </tbody>

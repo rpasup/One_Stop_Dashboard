@@ -1,4 +1,4 @@
 ProjectName,Node1WebServer,Node1AppServer,Node2WebServer,Node2AppServer,Node1DEH_OAuth,Node1DEH_AuthMS,Node1DEH_SMECO,Node1DEH_DB_Profile,Node2DEH_OAuth,Node2DEH_AuthMS,Node2DEH_SMECO,Node2DEH_DB_Profile,
-BBG1.0,success,failure,success,failure,failure,success,success,success,failure,success,success,success,
-BBG2.0,success,success,success,success,failure,success,success,success,failure,success,success,success,
-Retail,success,success,success,success,failure,success,success,success,failure,success,success,success,
+BBG1.0,success,failure,success,failure,failure,success,success,NA,success,success,success,NA,
+BBG2.0,success,success,success,success,success,success,success,success,success,success,success,success,
+Retail,NA,success,NA,success,success,success,success,NA,success,success,success,NA,

@@ -81,7 +81,7 @@ function Deploymentdetails() {
               <td>{row.Environment}</td>
               <td>{row.Application}</td>
               <td>{row.DeploymentStatus}</td>
-              <td> {getStatusIcon(row.Application_Status)}</td>
+              <td title={row.Application_Status}> {getStatusIcon(row.Application_Status)}</td>
               <td>{row.Build_Number}</td>
               <td>
                 <a href={row.logs} target="_blank" rel="noopener noreferrer">

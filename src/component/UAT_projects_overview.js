@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaCheckCircle } from "react-icons/fa";
-import { FaTimesCircle } from "react-icons/fa";
+import { FaTimesCircle,FaMinusCircle } from "react-icons/fa";
 import './UAT_projects_overview.css'
 
 function UAT_projects_overview() {
@@ -9,7 +9,9 @@ function UAT_projects_overview() {
   const getStatusIcon = (status) => {
     if (status === "success") {
       return <FaCheckCircle color="green"/>;
-    } else
+    }else if (status === "NA") {
+      return <FaMinusCircle color="gray" />;
+    }else
       return <FaTimesCircle color="red"/>;
   };
 
@@ -69,18 +71,18 @@ function UAT_projects_overview() {
           {data.map((row, index) => (
             <tr key={index}>
               <td className="bordered">{row.ProjectName}</td>
-              <td>{getStatusIcon(row.Node1WebServer)}</td>
-              <td className="bordered">{getStatusIcon(row.Node1AppServer)}</td>
-              <td>{getStatusIcon(row.Node2WebServer)}</td>
-              <td className="bordered">{getStatusIcon(row.Node2AppServer)}</td>
-              <td>{getStatusIcon(row.Node1DEH_OAuth)}</td>
-              <td>{getStatusIcon(row.Node1DEH_AuthMS)}</td>
-              <td>{getStatusIcon(row.Node1DEH_SMECO)}</td>
-              <td className="bordered">{getStatusIcon(row.Node1DEH_DB_Profile)}</td>
-              <td>{getStatusIcon(row.Node2DEH_OAuth)}</td>
-              <td>{getStatusIcon(row.Node2DEH_AuthMS)}</td>
-              <td>{getStatusIcon(row.Node2DEH_SMECO)}</td>
-              <td>{getStatusIcon(row.Node2DEH_DB_Profile)}</td>
+              <td title={row.Node1WebServer}>{getStatusIcon(row.Node1WebServer)}</td>
+              <td className="bordered" title={row.Node1AppServer}>{getStatusIcon(row.Node1AppServer)}</td>
+              <td title={row.Node2WebServer}>{getStatusIcon(row.Node2WebServer)}</td>
+              <td className="bordered" title={row.Node2AppServer}>{getStatusIcon(row.Node2AppServer)}</td>
+              <td title={row.Node1DEH_OAuth}>{getStatusIcon(row.Node1DEH_OAuth)}</td>
+              <td title={row.Node1DEH_AuthMS}>{getStatusIcon(row.Node1DEH_AuthMS)}</td>
+              <td title={row.Node1DEH_SMECO}>{getStatusIcon(row.Node1DEH_SMECO)}</td>
+              <td className="bordered" title={row.Node1DEH_DB_Profile}>{getStatusIcon(row.Node1DEH_DB_Profile)}</td>
+              <td title={row.Node2DEH_OAuth}>{getStatusIcon(row.Node2DEH_OAuth)}</td>
+              <td title={row.Node2DEH_AuthMS}>{getStatusIcon(row.Node2DEH_AuthMS)}</td>
+              <td title={row.Node2DEH_SMECO}>{getStatusIcon(row.Node2DEH_SMECO)}</td>
+              <td title={row.Node2DEH_DB_Profile}>{getStatusIcon(row.Node2DEH_DB_Profile)}</td>
 
             </tr>
           ))}
