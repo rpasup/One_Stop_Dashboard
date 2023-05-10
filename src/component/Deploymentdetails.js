@@ -54,10 +54,11 @@ function Deploymentdetails() {
       {maintenanceMessage && (
         <div className="maintenance-message"><span>{maintenanceMessage}</span></div>
       )}
-        <span>Filter By Application:</span>
+        {/* //Filter By Application: */}
+        <span></span>
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="Search by Application..."
           value={filterText}
           onChange={(e) => setFilterText(e.target.value)}
         />
