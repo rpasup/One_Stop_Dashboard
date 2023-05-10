@@ -82,6 +82,12 @@
     animation: marquee 15s linear infinite; /* set the animation */
   }
   
+  td.wrap-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
   @keyframes marquee {
     0% {
       transform: translateX(100%);

@@ -90,7 +90,7 @@ function Deploymentdetails() {
                 </a>
               </td>
               <td>{row.DeployedBy}</td>
-              <td>{row.Last_Deployed_On}</td>
+              <td className="wrap-text">{row.Last_Deployed_On}</td>
             </tr>
           ))}
         </tbody>

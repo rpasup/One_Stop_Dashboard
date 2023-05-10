@@ -1,5 +1,5 @@
 Environment,Application,DeploymentStatus,Application_Status,Build_Number,logs,DeployedBy,Last_Deployed_On,
-Development,Webapply,Deployed,up_running,1234,https://google.com,rajasekhar,13/04/23-13:25:00
+Development,Webapply,Deployed,up_running,1234,https://google.com,rajasekhar,09May-23_10:45:24
 Development,Webapply_Server,Not_deployed,not_up_running,1234
 Development,Document_Uploader,Deployed,up_running,12
 Development,Digital2.0_Web,Deployed,up_running,12
