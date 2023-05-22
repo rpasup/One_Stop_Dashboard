@@ -7,6 +7,7 @@ import Devprojectsoverview from './component/Dev_projects_overview';
 import UATprojectsoverview from './component/UAT_projects_overview';
 import WorkInProgress from './component/WorkInProgress';
 import './component/NavigationBar.css';
+import MarkdownViewer from "./component/MarkdownViewer";
 
 function App() {
 
@@ -31,6 +32,11 @@ function App() {
         <Route path="/digital_team_dashboard/Dev_projects_overview" element={<Devprojectsoverview />} />
         <Route path="/digital_team_dashboard/UAT_projects_overview" element={<UATprojectsoverview />} />
         <Route path="/digital_team_dashboard/Production_projects_overview" element={<WorkInProgress />} />
+        {/* <Route path="/digital_team_dashboard/Release_Notes" element={<MarkdownViewer fileName={'/digital_team_dashboard/Webapply_change.md'} />} /> */}
+        {/* <Route path="/digital_team_dashboard/Release_Notes/:fileName" component={MarkdownViewer} /> */}
+        {/* <Route path="/digital_team_dashboard/Release_Notes" element={<MarkdownViewer />} /> */}
+        <Route path="/digital_team_dashboard/Release_Notes/:fileName" element={<MarkdownViewer />} />
+        {/* <Route path="/digital_team_dashboard/Release_Notes" element={<MarkdownViewer />} /> */}
       </Routes>
     </Router>
   );

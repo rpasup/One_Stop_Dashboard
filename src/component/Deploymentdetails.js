@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 import { FaTimesCircle } from 'react-icons/fa';
 import { BsFillFileEarmarkTextFill } from 'react-icons/bs';
+import { MdOutlineNoteAlt } from 'react-icons/md';
 import { useTable, useSortBy } from 'react-table';
+// import MarkdownViewer from './MarkdownViewer';
 import './Deploymentdetails.css';
+import { useNavigate } from 'react-router-dom';
 
 function Deploymentdetails() {
   const [data, setData] = useState([]);
@@ -59,6 +62,30 @@ function Deploymentdetails() {
       },
       { Header: 'Build_Number', accessor: 'Build_Number' },
       {
+        Header: 'ReleaseNote',
+        accessor: 'Change_Logs',
+        Cell: ({ value }) => {
+          const navigate = useNavigate();
+      
+          const handleIconClick = () => {
+            navigate(`/digital_team_dashboard/Release_Notes/${value}`);
+          };
+      
+          return (
+            <div>
+              <MdOutlineNoteAlt onClick={handleIconClick} />
+            </div>
+          );
+        },
+      },    
+      
+      { Header: 'Deployed_By', accessor: 'DeployedBy' },
+      {
+        Header: 'Last_Deployed_On',
+        accessor: 'Last_Deployed_On',
+        Cell: ({ value }) => <div className="word-wrap">{value}</div>,
+      },
+      {
         Header: 'Logs',
         accessor: 'logs',
         Cell: ({ value }) => (
@@ -66,12 +93,6 @@ function Deploymentdetails() {
             <BsFillFileEarmarkTextFill />
           </a>
         ),
-      },
-      { Header: 'Deployed_By', accessor: 'DeployedBy' },
-      {
-        Header: 'Last_Deployed_On',
-        accessor: 'Last_Deployed_On',
-        Cell: ({ value }) => <div className="word-wrap">{value}</div>,
       },
     ],
     []

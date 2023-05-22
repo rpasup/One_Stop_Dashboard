@@ -1,6 +1,6 @@
-Environment,Application,DeploymentStatus,Application_Status,Build_Number,logs,DeployedBy,Last_Deployed_On,
-Development,Webapply,Deployed,up_running,1234,https://google.com,rajasekhar,09May-23_10:45:24
-Development,Webapply_Server,Not_deployed,not_up_running,1234
+Environment,Application,DeploymentStatus,Application_Status,Build_Number,logs,DeployedBy,Last_Deployed_On,Change_Logs,
+Development,Webapply,Deployed,up_running,1234,https://google.com,rajasekhar_pasupula,09May-23_10:45:24,Webapply_change.md
+Development,Webapply_Server,Not_deployed,up_running,1234,https://google.com,rajasekhar,09May-23_10:45:24,Webapply_Server_Change_log.md
 Development,Document_Uploader,Deployed,up_running,12
 Development,Digital2.0_Web,Deployed,up_running,12
 Development,BBG_Loans,Deployed,up_running,12
