@@ -8,6 +8,7 @@ import UATprojectsoverview from './component/UAT_projects_overview';
 import WorkInProgress from './component/WorkInProgress';
 import './component/NavigationBar.css';
 import MarkdownViewer from "./component/MarkdownViewer";
+import Chartview from "./component/Chartview";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
       <Routes>
         <Route path="/digital_team_dashboard" element={<Boxespage />} />
         <Route path="/digital_team_dashboard/Deployment_Info" element={<Deploymentdetails />} />
+        <Route path="/digital_team_dashboard/Deployment_Charts" element={<Chartview />} />
         <Route path="/digital_team_dashboard/Dev_projects_overview" element={<Devprojectsoverview />} />
         <Route path="/digital_team_dashboard/UAT_projects_overview" element={<UATprojectsoverview />} />
         <Route path="/digital_team_dashboard/Production_projects_overview" element={<WorkInProgress />} />

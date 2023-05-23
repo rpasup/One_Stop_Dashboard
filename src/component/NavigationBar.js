@@ -31,7 +31,7 @@ function NavigationBar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link><Link to="/digital_team_dashboard/Deployment_Info" style={{ textDecoration: 'none'}}>Deployment Overview</Link></Nav.Link>
+          <Nav.Link><Link to="/digital_team_dashboard/Deployment_Info" style={{ textDecoration: 'none'}}>Deployments</Link></Nav.Link>
           <Dropdown>
             <Dropdown.Toggle variant="dark" id="collasible-nav-dropdown">
               Projects Overview
@@ -48,6 +48,7 @@ function NavigationBar() {
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
+          <Nav.Link><Link to="/digital_team_dashboard/Deployment_Charts" style={{ textDecoration: 'none'}}>Reports</Link></Nav.Link>
           <span className="last-refreshed-time">Last Refreshed Time: {getLastRefreshedTime()}</span>
         </Nav>
       </Navbar.Collapse>
