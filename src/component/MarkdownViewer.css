@@ -79,6 +79,8 @@
     text-decoration: none;
     border-radius: 4px;
     margin-bottom: 20px;
+    position: fixed;
+    right: 300px;
   }
   
   .back-button:hover {

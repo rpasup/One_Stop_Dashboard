@@ -6,7 +6,7 @@ import { MdOutlineNoteAlt } from 'react-icons/md';
 import { useTable, useSortBy } from 'react-table';
 // import MarkdownViewer from './MarkdownViewer';
 import './Deploymentdetails.css';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 function Deploymentdetails() {
   const [data, setData] = useState([]);
@@ -65,15 +65,19 @@ function Deploymentdetails() {
         Header: 'ReleaseNote',
         accessor: 'Change_Logs',
         Cell: ({ value }) => {
-          const navigate = useNavigate();
+          // const navigate = useNavigate();
       
-          const handleIconClick = () => {
-            navigate(`/digital_team_dashboard/Release_Notes/${value}`);
+          const handleClick = (e) => {
+            e.preventDefault(); // Prevent opening in current page
+            // navigate(`/digital_team_dashboard/Release_Notes/${value}`);
+            // Open the link in a new tab
+            window.open('/digital_team_dashboard/Release_Notes/'+ value, '_blank');
           };
-      
           return (
             <div>
-              <MdOutlineNoteAlt onClick={handleIconClick} />
+              <a href={value} target="_blank" rel="noopener noreferrer" onClick={handleClick}>
+                <MdOutlineNoteAlt />
+              </a>
             </div>
           );
         },
